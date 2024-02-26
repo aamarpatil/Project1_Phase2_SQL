@@ -22,7 +22,7 @@ public class ProductService {
 
     }
 
-    public void saveProduct(Product p) throws ProductException {
+   /* public void saveProduct(Product p) throws ProductException {
         int id = p.getProductId();
 //        If no product with that id was found - insert the product
         if (productDAO.getProductById(id) == null) {
@@ -31,7 +31,7 @@ public class ProductService {
             throw new ProductException("product with id " + id + " already exists");
         }
     }
-
+*/
     public List<Product> getAllProducts() {
         Main.log.info("Product List returned: " + productList);
         return productDAO.getAllProducts();

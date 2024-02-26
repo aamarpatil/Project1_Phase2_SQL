@@ -31,6 +31,18 @@ public class SellerServiceTest {
     }
 
     @Test
+    public void getAllSellers() {
+        List<Seller> existingSellers = new ArrayList<>();
+        existingSellers.add(new Seller(1, "A"));
+        existingSellers.add(new Seller(1, "A"));
+        when(sellerDAO.getAllSeller()).thenReturn(existingSellers);
+
+        List<Seller> result = sellerService.getAllSeller();
+        assertFalse(result.isEmpty());
+        assertEquals(2, result.size());
+    }
+
+    @Test
     public void insertSeller() throws SellerException {
             Seller sellerA = new Seller(1, "Seller A");
             when(sellerDAO.getAllSeller()).thenReturn(new ArrayList<>());

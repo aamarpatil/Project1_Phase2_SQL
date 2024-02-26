@@ -19,9 +19,9 @@ public class SellerService {
         return sellerList;
     }
 
-    public void saveSeller(Seller a){
+ /*   public void saveSeller(Seller a){
         sellerDAO.insertSeller(a);
-    }
+    }*/
 
     List<Seller> sellerList;
     List<String> sellerName;
